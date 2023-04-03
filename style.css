@@ -1,49 +1,88 @@
 #card {
-    width: 200px;
-    height: 300px;
-    border: 2px solid black;
-    border-radius: 10px;
-    position: relative;
-  }
-  
-  #top-left {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  #middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #bottom-right {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    transform: rotate(180deg);
-  }
-  
-  .value {
-    font-size: 80px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .suit {
-    font-size: 40px;
-    text-align: center;
-    line-height: 0;
-    margin-top: -10px;
-    margin-bottom: 5px;
-  }
-  
-  .suit.heart, .suit.diamond {
-    color: red;
-  }
-  
-  .suit.spade, .suit.club {
-    color: black;
-  }
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+#top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#middle .suit {
+  font-size: 120px;
+  line-height: 0;
+  margin-top: -5px;
+}
+
+#bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#bottom-right .value {
+  transform: rotate(180deg);
+}
+
+#bottom-right .suit {
+  transform: rotate(180deg);
+}
+
+.value {
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.suit {
+  font-size: 40px;
+  text-align: center;
+  line-height: 0;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.suit.heart, .suit.diamond {
+  color: red;
+}
+
+.suit.spade, .suit.club {
+  color: black;
+}
+
+button {
+  margin-top: 20px;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.timer {
+  font-size: 120px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
