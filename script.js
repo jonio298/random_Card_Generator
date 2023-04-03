@@ -18,7 +18,7 @@ function updateTimer() {
   const formattedTime = ('0' + secondsLeft).slice(-2);
   timerElem.innerHTML = formattedTime;
   timerElem.style.color = "red";
-  timerElem.style.fontSize = '100px';
+  timerElem.style.fontSize = '90px';
 }
 
 function generateCard() {

@@ -5,7 +5,9 @@
   border-radius: 10px;
   position: relative;
   margin: 0 auto;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 7px 7px 7px rgba(31, 36, 32, 0.5);
+  border: 2.5px solid rgba(24, 23, 24, 0.638);
+  box-sizing: border-box;
 }
 
 #top-left {
@@ -68,8 +70,8 @@ button {
   font-size: 24px;
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #62766347;
+  color: rgb(0, 164, 234);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
