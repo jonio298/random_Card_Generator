@@ -1,3 +1,4 @@
+//timer//
 let timerInterval = null;
 let secondsLeft = 10;
 
@@ -15,16 +16,22 @@ function startTimer() {
 
 function updateTimer() {
   const timerElem = document.getElementById('timer');
-  const formattedTime = ('0' + secondsLeft).slice(-2);
-  timerElem.innerHTML = formattedTime;
-  timerElem.style.color = "red";
-  timerElem.style.fontSize = '90px';
+  const formattedTime = (secondsLeft < 11 ? '00:' : '') + ('0' + secondsLeft).slice(-2);  timerElem.innerHTML = formattedTime;
 }
 
+//Generate card//
 function generateCard() {
+
+//Animation//
+  const cardElem = document.getElementById('card');
+  cardElem.classList.add('flip-in');
+  setTimeout(() => {
+    cardElem.classList.remove('flip-in');
+  }, 500);
+
   const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
   const suits = ['&hearts;', '&diams;', '&spades;', '&clubs;'];
-
+ //select a card at random//
   const value = values[Math.floor(Math.random() * values.length)];
   const suit = suits[Math.floor(Math.random() * suits.length)];
 
@@ -37,7 +44,7 @@ function generateCard() {
 
   for (let i = 0; i < suitElems.length; i++) {
     suitElems[i].innerHTML = suit;
-
+//removing previous card and adding a new one//
     if (suit === '&hearts;' || suit === '&diams;') {
       suitElems[i].classList.add('heart');
       suitElems[i].classList.remove('club');
@@ -54,4 +61,4 @@ function generateCard() {
 
 startTimer();
 updateTimer();
-``
+
